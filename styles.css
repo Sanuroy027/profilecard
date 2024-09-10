@@ -6,17 +6,37 @@
 body {
   color: #000000;
   font-family: "Jost", sans-serif;
-  background-image: url(pexels-nguyendesigner-15372896.jpg);
+  background-image: url('pexels-nguyendesigner-15372896.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background-size: 100%; /* Adjust this value to zoom out */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  min-height: 100vh; /* Ensure the body covers the full viewport height */
+ margin-top: 80px;
+  padding: 0;
+  width: 100vw; /* Full viewport width */
+  overflow: hidden; /* Prevent scrolling */
 }
+
+/* Adjust background for tablet and smaller screens */
+@media (max-width: 768px) {
+  body {
+    background-image: url('pexels-nguyendesigner-15372896.jpg'); /* Change image for tablets */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Adjust background for phones */
+@media (max-width: 480px) {
+  body {
+    background-image: url('pexels-nguyendesigner-15372896.jpg'); /* Change image for phones */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+
 
 .card {
   max-width: 350px;
@@ -163,7 +183,7 @@ body {
   font-size: 16px;
   margin-bottom: 8px;
   color: #000;
-  margin-left: 120px;
+  margin-left: 5px;
  
  
 }
@@ -172,7 +192,7 @@ body {
   font-size: 16px;
   margin-bottom: 8px;
   color: #000;
-  margin-left: 80px;
+  
  
 }
 
@@ -183,10 +203,11 @@ body {
 .card-desc {
   line-height: 1.6;
   color: #050505;
-  font-size: 16px;
+  font-size: 15px;
   margin: 0;
   font-weight: 500;
   font-family: "DM Sans", sans-serif;
+  margin-bottom: -12px;
 }
 
 .card-social {
@@ -285,6 +306,7 @@ body {
 .card-timeline {
   margin-top: 30px;
   position: relative;
+  
 }
 .card-timeline:after {
   background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgb(255, 162, 39) 100%);
@@ -329,7 +351,7 @@ body {
 }
 
 .card-item-desc {
-  font-size: 14px;
+  font-size: 15px;
   color:  #000000;
   line-height: 1.5;
   font-family: "DM Sans", sans-serif;
@@ -376,4 +398,8 @@ body {
   font-weight: 500;
   font-family: "Jost", sans-serif;
   transition: 0.3s;
+}
+.contact-me:hover {
+  background-color: #6db4ff; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
